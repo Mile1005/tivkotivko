@@ -51,7 +51,11 @@ export default function Page() {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#e2e8f0] via-[#f8fafc] to-[#f1f5f9] overflow-hidden">
+    <>
+      <head>
+        <title>TivkoTivko - Вистината пред се</title>
+      </head>
+      <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#e2e8f0] via-[#f8fafc] to-[#f1f5f9] overflow-hidden">
       {/* Animated background circles */}
       <motion.div className="absolute inset-0 z-0 pointer-events-none" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <motion.div className="absolute top-1/4 left-1/3 w-[32rem] h-[32rem] bg-red-500 opacity-20 rounded-full blur-3xl" animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: Infinity, duration: 4 }} />
@@ -137,12 +141,12 @@ export default function Page() {
       <style jsx global>{`
         .glass-card {
           background: rgba(255, 255, 255, 0.25);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37);
           backdrop-filter: blur(16px);
           -webkit-backdrop-filter: blur(16px);
           border-radius: 24px;
           border: 1px solid rgba(255, 255, 255, 0.18);
-          box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37), 0 0 8px 1px #ff0000;
+          box-shadow: 0 4px 16px 0 rgba(31,38,135,0.37), 0 0 4px 0.5px #ff0000;
           border: 1px solid #ff0000;
         }
         .blinking-cursor {
@@ -152,6 +156,7 @@ export default function Page() {
           to { opacity: 0; }
         }
       `}</style>
-    </div>
+      </div>
+    </>
   );
 }
