@@ -62,7 +62,7 @@ export default function Page() {
             textTransform: 'uppercase',
             letterSpacing: '0.07em',
             marginTop: '0.5rem',
-            fontSize: 'clamp(2.2rem, 7vw, 3.5rem)',
+            fontSize: 'clamp(2.6rem, 7vw, 3.6rem)',
             whiteSpace: 'nowrap'
           }}
           initial={{ opacity: 0, y: -10 }}
